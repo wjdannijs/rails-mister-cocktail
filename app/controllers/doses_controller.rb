@@ -8,16 +8,16 @@ class DosesController < ApplicationController
   def create
     @dose = Dose.new(dose_params)
     # we need `cocktail_id` to asssociate dose with corresponding cocktail
-    @dose.cocktail = Cocktail.find(params[:cocktail_id])
-    @dose.ingredient = Ingredient.find(params[:ingredient_id])
+    @cocktail = Cocktail.find(params[:cocktail_id])
+    @dose.cocktail_id = @cocktail.id
     if @dose.save
-      redirect_to dose_path(@dose)
+      redirect_to cocktail_path(@cocktail)
     else
       render :new
     end
   end
 
-  def delete
+  def destroy
     @dose = Dose.find(params[:id])
     @dose.destroy!
     redirect_to cocktails_path
@@ -26,7 +26,7 @@ class DosesController < ApplicationController
   private
 
   def dose_params
-    params.require(:dose).permit(:description)
+    params.require(:dose).permit(:description, :ingredient_id)
   end
 
 end
