@@ -3,5 +3,19 @@
 <%= @cocktail.name %>
 
 <br>
+<hr>
+<br>
+<ul>
+  <ol>
+    <% @doses.each do |dose| %>
+    <li> <%= dose.description %> -- <%= dose.ingredient.name %> </li>
+    <% end %>
+  </ol>
+</ul>
+<br>
+<hr>
+<br>
+  <%= render 'doses/form' %>
+<br>
 
 <%= link_to "Back to home", cocktails_path %>

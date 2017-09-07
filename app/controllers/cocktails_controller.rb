@@ -19,6 +19,8 @@ class CocktailsController < ApplicationController
   end
 
   def show
+    @doses = Dose.where(cocktail_id: @cocktail.id)
+    @dose = Dose.new
   end
 
   def edit
