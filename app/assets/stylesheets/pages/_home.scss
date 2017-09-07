@@ -1,0 +1,27 @@
+// Specific CSS for your home-page
+
+
+body {
+  background: {
+     image: asset_url("background_home.jpg");
+     size: cover;
+     repeat: no-repeat;
+     attachment: fixed;
+  }
+}
+
+.background-card{
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  justify-content: center;
+  margin: 100px;
+  background: {
+    color:rgba(150,150,150,0.8);
+  }
+}
+
+.yield-card{
+  top: 0;
+  left:0;
+}
