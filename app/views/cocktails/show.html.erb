@@ -4,9 +4,9 @@
   </div>
   <div class="row">
     <ol>
-      <div class="col-xs-12 col-md-6" id="cocktail_img">
+      <div class="col-xs-12 col-md-6" style="padding: 50px">
         <% if @cocktail.cocktail_photo? %>
-          <%= cl_image_tag @cocktail.cocktail_photo, height: 300, width: 400, crop: :fill %>
+          <%= cl_image_tag @cocktail.cocktail_photo, crop: :fill, id: "cocktail_img" %>
         <% else %>
           <%= render 'image_upload' %>
         <% end %>
