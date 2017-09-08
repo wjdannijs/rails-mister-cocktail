@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsMisterCocktail</title>
+    <title>Dub's Cocktails</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -13,9 +13,7 @@
   <body>
     <%= render "shared/navbar" %>
     <div class="background-card">
-      <div class="yield-card">
-        <%= yield %>
-      </div>
+      <%= yield %>
     </div>
     <%= render "shared/footer" %>
   </body>

@@ -1,0 +1,17 @@
+#wrapper {
+    overflow: hidden; /* will contain if #first is longer than #second */
+}
+#cocktail_img {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#cocktail_img img {
+    max-width: 100%;
+    height: auto;
+}
+
+#title {
+  text-align: center;
+}
