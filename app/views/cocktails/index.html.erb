@@ -1,7 +1,18 @@
 <h1>Cocktails#index</h1>
 
-<ol>
-<% @cocktails.each do |cocktail| %>
-<li> <%= link_to cocktail.name, cocktail_path(cocktail) %> </li>
-<% end %>
-</ol>
+<div class="container">
+  <div class="row">
+    <ol>
+      <% @cocktails.each do |cocktail| %>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path "basic_cocktail.jpg" %>);">
+            <div class="card-description">
+              <h2><%= cocktail.name %></h2>
+            </div>
+            <%= link_to cocktail.name, cocktail_path(cocktail), class: "card-link" %>
+          </div>
+        </div>
+      <% end %>
+    </ol>
+  </div>
+</div>
